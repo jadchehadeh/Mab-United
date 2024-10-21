@@ -5,7 +5,7 @@ body, html {
     height: 100%;
 }
 
-#preloader {
+#preloadervideo {
     position: fixed;
     top: 0;
     left: 0;

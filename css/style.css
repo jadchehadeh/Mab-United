@@ -343,14 +343,15 @@ a:hover, a:active, a:focus {
 
 .carousel .carousel-caption {
     position: absolute;
-    top: 0;
-    bottom: 0;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset by half its width and height */
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    height: calc(100vh - 170px);
-    min-height: 400px;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    height: auto; /* Allow height to auto adjust */
+    text-align: center; /* Center text */
 }
 
 .carousel .carousel-caption p {
@@ -583,7 +584,7 @@ a:hover, a:active, a:focus {
     height: 80px;
     top: -20px;
     left: -10px;
-    border: 2px dotted #ffffff;
+    border: 2px dotted #2b0aea;
     border-radius: 60px;
     z-index: 1;
 }
@@ -595,19 +596,19 @@ a:hover, a:active, a:focus {
     height: 79px;
     top: -18px;
     left: -9px;
-    background: #030f27;
+    background: #ffffff;
     border-radius: 60px;
     z-index: 2;
 }
 
 .feature .col-md-12:nth-child(2n) .feature-icon::after {
-    background: #fdbe33;
+    background: #fdfdff; /*this change the color in middle */
 }
 
 .feature .feature-icon [class^="flaticon-"]::before {
     position: relative;
     margin: 0;
-    color: #fdbe33;
+    color: #2b0aea;  /*this change the logo color*/
     font-size: 60px;
     line-height: 60px;
     z-index: 3;
@@ -619,14 +620,14 @@ a:hover, a:active, a:focus {
 
 .feature .feature-text h3 {
     margin: 0 0 10px 0;
-    color: #fdbe33;
+    color: #efeef3;
     font-size: 25px;
     font-weight: 600;
 }
 
 .feature .feature-text p {
     margin: 0;
-    color: #fdbe33;
+    color: #efeef3;
     font-size: 18px;
     font-weight: 400;
 }
@@ -634,7 +635,7 @@ a:hover, a:active, a:focus {
 .feature .col-md-12:nth-child(2n) [class^="flaticon-"]::before,
 .feature .col-md-12:nth-child(2n) h3,
 .feature .col-md-12:nth-child(2n) p {
-    color: #030f27;
+    color:#2b0aea;
 }
 
 

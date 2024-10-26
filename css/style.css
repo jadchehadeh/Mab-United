@@ -1,6 +1,7 @@
 /*******************************/
 /********* General CSS *********/
 /*******************************/
+
 .video-container {
     position: fixed;
     top: 0;
@@ -674,15 +675,15 @@ a:hover, a:active, a:focus {
     font-size: 16px;
     font-weight: 500;
     letter-spacing: 1px;
-    color: #030f27;
+    color: white;
     border-radius: 0;
-    background: #fdbe33;
+    background: #0b2965;
     transition: .3s;
 }
 
 .about .about-text a.btn:hover {
-    color: #fdbe33;
-    background: #030f27;
+    color: #ffffff;
+    background: #25488d;
 }
 
 @media (max-width: 767.98px) {

@@ -32,6 +32,7 @@
             Your browser does not support the video tag.
         </video>
     </div>
+    <div id="First"></div>
     <body id="main-content">
         <!-- <div class="wrapper">
              Top Bar Start 
@@ -89,7 +90,7 @@
             <!-- Top Bar End -->
 
             <!-- Nav Bar Start -->
-            <div class="nav-bar">
+            <div id="Nav" class="nav-bar">
                 <div class="container-fluid">
                     <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
                         <!-- Logo on the Left -->
@@ -101,21 +102,20 @@
                         <!-- Navbar links and button aligned to the right -->
                         <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
                             <div class="navbar-nav">
-                                <a href="#main-content" class="nav-item nav-link">Home</a>
-                                <a href="#about" class="nav-item nav-link">About</a>
-                                <a href="#" class="nav-item nav-link">Service</a>
-                                <a href="#" class="nav-item nav-link">Team</a>
-                                <a href="#" class="nav-item nav-link">Project</a>
+                                <a href="#main-content" class="nav-item nav-link" onclick="closeNavbar()">Home</a>
+                                <a href="#about" class="nav-item nav-link" onclick="closeNavbar()">About</a>
+                                <a href="#" class="nav-item nav-link" onclick="closeNavbar()">Service</a>
+                                <a href="#" class="nav-item nav-link" onclick="closeNavbar()">Team</a>
+                                <a href="#" class="nav-item nav-link" onclick="closeNavbar()">Project</a>
                                 <div class="nav-item dropdown">
                                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                                     <div class="dropdown-menu">
-                                        <a href="#" class="dropdown-item">Still Figuring what to put</a>
-                                        <a href="#" class="dropdown-item">Still Figuring what to put</a>
+                                        <a href="#" class="dropdown-item" onclick="closeNavbar()">Still Figuring what to put</a>
+                                        <a href="#" class="dropdown-item" onclick="closeNavbar()">Still Figuring what to put</a>
                                     </div>
                                 </div>
-                                <a href="#" class="nav-item nav-link">Contact</a>
+                                <a href="#" class="nav-item nav-link" onclick="closeNavbar()">Contact</a>
                             </div>
-                            
                             <!-- Quote button on the right -->
                             <!-- <a class="btn ml-3" href="#">Get A Quote</a> -->
                         </div>
@@ -123,7 +123,15 @@
                     <div class="full-width-line"></div>
                 </div>
             </div>
-           
+            <script>
+                function closeNavbar() {
+                    // Collapse the navbar when a link is clicked
+                    const navbarCollapse = document.getElementById("navbarCollapse");
+                    if (navbarCollapse.classList.contains("show")) {
+                        navbarCollapse.classList.remove("show");
+                    }
+                }
+            </script>
             
             <!-- Nav Bar End -->
 

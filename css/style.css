@@ -1,7 +1,6 @@
 /*******************************/
 /********* General CSS *********/
 /*******************************/
-
 .video-container {
     position: fixed;
     top: 0;
@@ -682,7 +681,7 @@ a:hover, a:active, a:focus {
 }
 
 .about .about-text a.btn:hover {
-    color: #ffffff;
+    color: #fbfafa;
     background: #25488d;
 }
 

@@ -642,6 +642,19 @@ a:hover, a:active, a:focus {
 /*******************************/
 /********** About CSS **********/
 /*******************************/
+.about-img {
+    perspective: 1000px; /* Create a 3D perspective */
+}
+
+.about-img img {
+    transition: transform 0.6s; /* Smooth transition for the transform */
+    transform-style: preserve-3d; /* Allow the child elements to be transformed in 3D */
+}
+
+.about-img:hover img {
+    transform: rotateY(15deg) rotateX(10deg); /* Rotate the image in 3D */
+}
+
 .about {
     position: relative;
     width: 100%;
@@ -720,13 +733,13 @@ a:hover, a:active, a:focus {
     margin: 0;
     font-size: 60px;
     line-height: 60px;
-    background-image: linear-gradient(#ffffff, #fdbe33);
+    background-image: linear-gradient(#ffffff, #25488d);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .fact .fact-right .fact-icon [class^="flaticon-"]::before {
-    background-image: linear-gradient(#ffffff, #030f27);
+    background-image: linear-gradient(#ffffff, #0b2965);
 }
 
 .fact .fact-left,
@@ -748,17 +761,17 @@ a:hover, a:active, a:focus {
 }
 
 .fact .fact-left {
-    color: #fdbe33;
-    background: #030f27;
+    color: black;
+    background: #25488d;
 }
 
 .fact .fact-right {
-    color: #030f27;
-    background: #fdbe33;
+    color: white;
+    background: #0b2965;
 }
 
 .fact .fact-left h2 {
-    color: #fdbe33;
+    color: white;
 }
 
 

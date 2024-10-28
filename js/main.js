@@ -96,21 +96,28 @@ window.addEventListener('scroll', function () {
     
     
     // Modal Video
-    $(document).ready(function () {
-        var $videoSrc;
-        $('.btn-play').click(function () {
-            $videoSrc = $(this).data("src");
-        });
-        console.log($videoSrc);
+   $(document).ready(function () {
+    var $videoSrc;
 
-        $('#videoModal').on('shown.bs.modal', function (e) {
-            $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
-        })
-
-        $('#videoModal').on('hide.bs.modal', function (e) {
-            $("#video").attr('src', $videoSrc);
-        })
+    $('.btn-play').click(function () {
+        // Set the video source when the play button is clicked
+        $videoSrc = 'path/to/your/video.mp4'; // Update with your video file path
     });
+
+    $('#videoModal').on('shown.bs.modal', function (e) {
+        // Set the video source and autoplay when the modal is shown
+        $("#video source").attr('src', $videoSrc);
+        $("#video")[0].load(); // Load the new video
+        $("#video")[0].play(); // Play the video
+    });
+
+    $('#videoModal').on('hide.bs.modal', function (e) {
+        // Pause and reset the video when the modal is hidden
+        $("#video")[0].pause();
+        $("#video")[0].currentTime = 0; // Reset to the start
+    });
+});
+
 
 
     // Testimonial Slider

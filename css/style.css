@@ -810,7 +810,7 @@ a:hover, a:active, a:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(3, 15, 39, .7);
+    background: rgba(13, 67, 173, 0.7);
     transition: .5s;
     opacity: 0;
 }
@@ -828,7 +828,7 @@ a:hover, a:active, a:focus {
     display: flex;
     align-items: center;
     height: 60px;
-    background: #030f27;
+    background: #0b2965;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -840,7 +840,7 @@ a:hover, a:active, a:focus {
     width: calc(100% - 60px);
     font-size: 20px;
     font-weight: 700;
-    color: #fdbe33;
+    color: white;
     text-align: left;
     overflow: hidden;
     white-space: nowrap;
@@ -857,8 +857,8 @@ a:hover, a:active, a:focus {
     font-size: 60px;
     line-height: 60px;
     font-weight: 100;
-    color: #030f27;
-    background: #fdbe33;
+    color: #f7f8f9;
+    background: #25488d;
     border-radius: 0;
     transition: .3s;
 }

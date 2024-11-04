@@ -1,6 +1,16 @@
 /*******************************/
 /********* General CSS *********/
 /*******************************/
+.btn-primary{
+    background-color: #0b2965;
+    color :white !important;
+    border-color: #000000;
+}
+.btn-primary:hover{
+    background-color: #294f9b;
+    color :white !important;
+    border-color: #000000;
+}
 .video-container {
     position: fixed;
     top: 0;
@@ -34,7 +44,7 @@
 /* Base Styles */
 body {
     color: #666666;
-    background: #dddddd;
+    background: white;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
 }
@@ -524,8 +534,8 @@ a:hover, a:active, a:focus {
 }
 
 .section-header p {
-    color: #fdbe33;
-    font-size: 18px;
+    color: #0b2965;
+    font-size: 35px;
     font-weight: 600;
     margin-bottom: 5px;
 }
@@ -535,6 +545,7 @@ a:hover, a:active, a:focus {
     position: relative;
     font-size: 50px;
     font-weight: 700;
+    color: #25488d;
 }
 
 @media (max-width: 767.98px) {
@@ -1016,29 +1027,30 @@ a:hover, a:active, a:focus {
     position: relative;
     padding: 25px 15px;
     text-align: center;
-    background: #030f27;
+    background: #dddddd;
     transition: .5s;
 }
 
 .team .team-text h2 {
     font-size: 20px;
     font-weight: 600;
-    color: #fdbe33;
+    color: #0b2965;
     transition: .5s;
 }
 
 .team .team-text p {
     margin: 0;
-    color: #ffffff;
+    color: #25488d;
 }
 
 .team .team-item:hover .team-text {
-    background: #fdbe33;
+    background: white;
 }
 
 .team .team-item:hover .team-text h2 {
     color: #030f27;
     letter-spacing: 1px;
+    font-size: 30px;
 }
 
 .team .team-social {
@@ -1108,7 +1120,7 @@ a:hover, a:active, a:focus {
     height: 100%;
     top: 0;
     left: calc(50% - .5px);
-    background: #fdbe33;
+    background: #25488d;
 }
 
 .faqs #accordion-1 {
@@ -1162,14 +1174,14 @@ a:hover, a:active, a:focus {
 }
 
 .faqs .card-header [data-toggle="collapse"][aria-expanded="true"] {
-    background: #fdbe33;
+    background: #25488d;
 }
 
 .faqs .card-header [data-toggle="collapse"]:after {
     font-family: 'font Awesome 5 Free';
     content: "\f067";
     float: right;
-    color: #fdbe33;
+    color: #0b2965;
     font-size: 12px;
     font-weight: 900;
     transition: .5s;

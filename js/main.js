@@ -1,3 +1,41 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const logosContainer = document.querySelector('.client-logos');
+    const logos = document.querySelectorAll('.client-logos img');
+    const containerWidth = document.querySelector('.clients').offsetWidth;
+
+    // Calculate total width of the logos + margin to determine scroll distance
+    let totalWidth = 0;
+    logos.forEach(logo => {
+        totalWidth += logo.offsetWidth + 300; // logo width + margin (space between logos)
+    });
+
+    // Clone the logos for the seamless loop effect
+    logosContainer.innerHTML += logosContainer.innerHTML; // Clone the logos inside the container
+
+    // Set up a function to keep the logos moving smoothly
+    let currentPos = 0;  // Current position of the logos
+
+    function moveLogos() {
+        currentPos -= 1;  // Move the logos left by 1px
+
+        // If the first logo has moved off the screen, reposition it at the end
+        if (currentPos <= -totalWidth / 2) {
+            currentPos += totalWidth / 2;  // Reset position to create an infinite loop
+        }
+
+        // Apply the new position with smooth scrolling
+        logosContainer.style.transform = `translateX(${currentPos}px)`;
+
+        // Keep calling the moveLogos function to create the continuous scroll effect
+        requestAnimationFrame(moveLogos); // Smooth animation frame
+    }
+
+    // Start the animation
+    moveLogos();
+});
+
+
+
 document.addEventListener("DOMContentLoaded", function() {
     const preloader = document.getElementById('preloader');
     const mainContent = document.getElementById('main-content');

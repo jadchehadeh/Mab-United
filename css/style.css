@@ -1,6 +1,26 @@
 /*******************************/
 /********* General CSS *********/
 /*******************************/
+.clients {
+    width: 100%;
+    background-color: #ffffff;
+    overflow: hidden; /* Hide logos that are off-screen */
+    position: relative;
+}
+
+/* The moving container for the logos */
+.client-logos {
+    display: flex;
+    will-change: transform; /* Optimization for smooth animation */
+    transition: transform 0s linear; /* No transition needed for infinite scroll */
+}
+
+/* Style for each client logo */
+.client-logos img {
+    margin: 0 150px; /* More space between logos */
+    max-height: 150px; /* Bigger logo size */
+    object-fit: contain;
+}
 .btn-primary{
     background-color: #0b2965;
     color :white !important;
@@ -2131,12 +2151,28 @@ a:hover, a:active, a:focus {
 /*******************************/
 /********* Footer CSS **********/
 /*******************************/
+/* color: #0b2965;
+font-size: 35px;
+font-weight: 600;
+margin-bottom: 5px;
+}
+
+.section-header h2 {
+margin: 0;
+position: relative;
+font-size: 50px;
+font-weight: 700;
+color: #25488d; */
+
+
+
+
 .footer {
     position: relative;
     margin-top: 45px;
     padding-top: 90px;
-    background: #030f27;
-    color: #ffffff;
+    background: #0b2965;                
+    color: #0b2965;
 }
 
 .footer .footer-contact,
@@ -2152,7 +2188,7 @@ a:hover, a:active, a:focus {
     padding-bottom: 10px;
     font-size: 20px;
     font-weight: 600;
-    color: #fdbe33;
+    color: #0b2965;
 }
 
 .footer h2::after {
@@ -2162,7 +2198,7 @@ a:hover, a:active, a:focus {
     height: 2px;
     left: 0;
     bottom: 0;
-    background: #fdbe33;
+    background: #0b2965;
 }
 
 .footer .footer-link a {
@@ -2181,7 +2217,7 @@ a:hover, a:active, a:focus {
 }
 
 .footer .footer-link a:hover {
-    color: #fdbe33;
+    color: #0b2965;
     letter-spacing: 1px;
 }
 
@@ -2216,7 +2252,7 @@ a:hover, a:active, a:focus {
 }
 
 .footer .footer-social a:hover i {
-    color: #030f27;
+    color: #25488d;
 }
 
 .footer .newsletter .form {
@@ -2240,16 +2276,16 @@ a:hover, a:active, a:focus {
     font-size: 14px;
     font-weight: 500;
     text-transform: uppercase;
-    color: #fdbe33;
+    color: #25488d;
     background: #121518;
     border-radius: 0;
-    border: 2px solid #fdbe33;
+    border: 2px solid #25488d;
     transition: .3s;
 }
 
 .footer .newsletter .btn:hover {
     color: #121518;
-    background: #fdbe33;
+    background: #25488d;
 }
 
 .footer .footer-menu .f-menu {
@@ -2270,7 +2306,7 @@ a:hover, a:active, a:focus {
 }
 
 .footer .footer-menu .f-menu a:hover {
-    color: #fdbe33;
+    color: #25488d;
 }
 
 .footer .footer-menu .f-menu a:last-child {
@@ -2294,7 +2330,7 @@ a:hover, a:active, a:focus {
 }
 
 .footer .copyright p a {
-    color: #fdbe33;
+    color: #0b2965;
     font-weight: 500;
     letter-spacing: 1px;
 }

@@ -1,63 +1,63 @@
 //testing javascript
 // Scroll to Section Function
-function scrollToSection(id) {
-    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-}
+// function scrollToSection(id) {
+//     document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+// }
 
-// Gear Rotation Logic
-const gear = document.getElementById('gear');
-const achievementDisplay = document.getElementById('achievement-display');
+// // Gear Rotation Logic
+// const gear = document.getElementById('gear');
+// const achievementDisplay = document.getElementById('achievement-display');
 
-// Achievements for each rotation angle
-const achievements = [
-    { angle: 0, text: "2015: Company Founded - A New Beginning" },
-    { angle: 45, text: "2016: First International Contract Secured" },
-    { angle: 90, text: "2017: Major Project Completion in Riyadh" },
-    { angle: 135, text: "2018: Expansion into Trading Services" },
-    { angle: 180, text: "2019: Awarded 'Best Contractor of the Year'" },
-    { angle: 225, text: "2020: Record-Breaking Revenue Growth" },
-    { angle: 270, text: "2021: New Partnerships with Global Brands" },
-    { angle: 315, text: "2022: Innovation in Sustainable Construction" },
-    { angle: 360, text: "2023: Celebrating a Decade of Excellence" }
-];
+// // Achievements for each rotation angle
+// const achievements = [
+//     { angle: 0, text: "2015: Company Founded - A New Beginning" },
+//     { angle: 45, text: "2016: First International Contract Secured" },
+//     { angle: 90, text: "2017: Major Project Completion in Riyadh" },
+//     { angle: 135, text: "2018: Expansion into Trading Services" },
+//     { angle: 180, text: "2019: Awarded 'Best Contractor of the Year'" },
+//     { angle: 225, text: "2020: Record-Breaking Revenue Growth" },
+//     { angle: 270, text: "2021: New Partnerships with Global Brands" },
+//     { angle: 315, text: "2022: Innovation in Sustainable Construction" },
+//     { angle: 360, text: "2023: Celebrating a Decade of Excellence" }
+// ];
 
-// Current rotation state
-let currentAngle = 0;
+// // Current rotation state
+// let currentAngle = 0;
 
-// Function to update achievement display
-function updateAchievement(angle) {
-    const achievement = achievements.find(item => item.angle === angle);
-    if (achievement) {
-        achievementDisplay.textContent = achievement.text;
-    }
-}
+// // Function to update achievement display
+// function updateAchievement(angle) {
+//     const achievement = achievements.find(item => item.angle === angle);
+//     if (achievement) {
+//         achievementDisplay.textContent = achievement.text;
+//     }
+// }
 
-// Drag and Spin Feature
-let isDragging = false;
-let startX = 0;
+// // Drag and Spin Feature
+// let isDragging = false;
+// let startX = 0;
 
-gear.addEventListener('mousedown', (e) => {
-    isDragging = true;
-    startX = e.clientX;
-});
+// gear.addEventListener('mousedown', (e) => {
+//     isDragging = true;
+//     startX = e.clientX;
+// });
 
-document.addEventListener('mousemove', (e) => {
-    if (isDragging) {
-        const deltaX = e.clientX - startX;
-        if (Math.abs(deltaX) > 50) {
-            currentAngle += deltaX > 0 ? 45 : -45;
-            if (currentAngle >= 360) currentAngle = 0;
-            if (currentAngle < 0) currentAngle = 315;
-            gear.style.transform = `rotate(${currentAngle}deg)`;
-            updateAchievement(currentAngle);
-            startX = e.clientX;
-        }
-    }
-});
+// document.addEventListener('mousemove', (e) => {
+//     if (isDragging) {
+//         const deltaX = e.clientX - startX;
+//         if (Math.abs(deltaX) > 50) {
+//             currentAngle += deltaX > 0 ? 45 : -45;
+//             if (currentAngle >= 360) currentAngle = 0;
+//             if (currentAngle < 0) currentAngle = 315;
+//             gear.style.transform = `rotate(${currentAngle}deg)`;
+//             updateAchievement(currentAngle);
+//             startX = e.clientX;
+//         }
+//     }
+// });
 
-document.addEventListener('mouseup', () => {
-    isDragging = false;
-});
+// document.addEventListener('mouseup', () => {
+//     isDragging = false;
+// });
 
 //testing javascript end
 
